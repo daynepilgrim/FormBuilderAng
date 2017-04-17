@@ -1,0 +1,152 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">MISCELLANEOUS INFORMATION</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                How did you hear about this opening?
+                <div class="radio">
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.hearAboutUs" value="website"> Truck-Lite Website
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.hearAboutUs" value="otherOnLine"> Other On-line 
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.hearAboutUs" value="newspaper"> Newspaper 
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.hearAboutUs" value="stateBoardJob"> State Board Job 
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.hearAboutUs" value="other"> Other 
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                Referred by (name of person, firm, agency, advertisement, etc.):
+                <input ng-model="formData.miscellaneous.referral" placeholder="Referral" class="form-control input-md" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                Have you ever been previously employed by Truck-Lite at any of our business locations:
+                <div class="radio">
+                    <label>
+                    <input type="radio" ng-model="formData.miscellaneous.formerEmployee" ng-value="true"> Yes
+                </label>
+                    <label>
+                    <input type="radio" ng-model="formData.miscellaneous.formerEmployee" ng-value="false"> No 
+                </label>
+                </div>
+            </div>
+        </div>
+        <p>If yes, please identify:</p>
+        <div class="form-group">
+            <div class="col-md-4">
+                Plant Location
+                <input ng-model="formData.miscellaneous.plantLocation" placeholder="Plant Location" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-3">
+                Start Date
+                <input ng-model="formData.miscellaneous.startDate" placeholder="Start Date" class="form-control input-md" type="date">
+            </div>
+            <div class="col-md-3">
+                End Date
+                <input ng-model="formData.miscellaneous.endDate" placeholder="End Date" class="form-control input-md" type="date">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                What special skills or qualifications do you possess that are relevant to the job for which you are applying:
+                <textarea ng-model="formData.miscellaneous.skills" placeholder="Relevant skills..." class="form-control input-md"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                What machines, equipment or software do you operate or work with that are relevant to the job for which you are applying:
+                <textarea ng-model="formData.miscellaneous.equipmentExperience" placeholder="Machine and equipment experience..." class="form-control input-md"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                Have you ever been discharged or asked to resign by an employer:
+                <div class="radio">
+                    <label>
+                    <input type="radio" ng-model="formData.miscellaneous.discharged" ng-value="true"> Yes
+                </label>
+                    <label>
+                    <input type="radio" ng-model="formData.miscellaneous.discharged" ng-value="false"> No 
+                </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                If yes, please explain and state circumstances:
+                <textarea ng-model="formData.miscellaneous.dischargedReason" placeholder="Please explain..." class="form-control input-md"
+                    type="text"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                Have you ever been convicted of a misdemeanor (not including minor traffic offenses) or felony: *
+                <div class="radio">
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.misdemeanorFelony" ng-value="true"> Yes
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.miscellaneous.misdemeanorFelony" ng-value="false"> No 
+                    </label>
+                </div>
+                <p class="help-block">* A conviction record will not necessarily be a bar to employment. A conviction which is substantially related
+                    to the functions or qualifications of the position(s) for which you are applying may be taken into consideration,
+                    pursuant to an individualized assessment and in accordance with applicable law. No candidate is obligated
+                    to disclose sealed, annulled or expunged convictions or convictions pardoned by the Governor. Failure
+                    to honestly and completely answer this question (other than as described below) will result in discontinued
+                    consideration of the applicant or termination of employment. This information will be used for job-related
+                    purposes consistent with applicable law and is only relevant in determining whether the conviction is
+                    related to the job for which you are applying. Factors such as age at the time of the offense(s), seriousness
+                    of the offense(s), nature of the violation(s), its relation, if any, to the job you are seeking and rehabilitation
+                    will be taken into account. Do not report any conviction that has been sealed, expunged, statutorily
+                    eradicated, annulled, impounded, erased, dismissed under the First Offender’s law, pardoned by the Governor,
+                    or which state law allows you to lawfully deny. Based on current state law, applicants/residents of Pennsylvania
+                    are not obligated to report misdemeanor convictions. Applicants/residents of California, Connecticut,
+                    Hawaii, Kentucky, Massachusetts, or Washington may not be required to answer this question or may have
+                    a right to exclude certain convictions from your response. Applicants are not required to disclose violations,
+                    infractions, petty infractions, petty misdemeanors or summary offenses. </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                Date of Conviction
+                <input ng-model="formData.miscellaneous.conviction1.date" class="form-control input-md" type="date">
+            </div>
+            <div class="col-md-4">
+                Nature of the Offense
+                <input ng-model="formData.miscellaneous.conviction1.natureOfOffense" placeholder="Nature of the Offense" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-4">
+                Disposition
+                <input ng-model="formData.miscellaneous.conviction1.disposition" placeholder="Disposition" class="form-control input-md" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                Date of Conviction
+                <input ng-model="formData.miscellaneous.conviction2.date" class="form-control input-md" type="date">
+            </div>
+            <div class="col-md-4">
+                Nature of the Offense
+                <input ng-model="formData.miscellaneous.conviction2.natureOfOffense" placeholder="Nature of the Offense" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-4">
+                Disposition
+                <input ng-model="formData.miscellaneous.conviction2.disposition" placeholder="Disposition" class="form-control input-md" type="text">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<a ng-href="/" class="btn btn-primary"> < BACK</a>
+<form ng-submit="submitForm(appForm.$valid)" name="appForm" class="form-horizontal" novalidate>
+    <fieldset>
+        <legend class="text-center">APPLICATION FOR EMPLOYMENT</legend>
+        <div ng-include="'partials/formPartials/applicant.html'"></div>
+        <div ng-include="'partials/formPartials/education.html'"></div>
+        <div ng-include="'partials/formPartials/employment.html'"></div>
+        <div ng-include="'partials/formPartials/references.html'"></div>
+        <div ng-include="'partials/formPartials/miscellaneous.html'"></div>
+        <div ng-include="'partials/formPartials/agreement.html'"></div>
+        <div class="form-group">
+            <div ng-if="submitted" class="has-error text-center">
+                <p class="help-block">Required information missing.  Please check form and submit again.</p>
+            </div>
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-12">
+                <button type="submit" style="width: 100%;" class="btn btn-primary">Submit Your Application</button>
+            </div>
+    </fieldset>
+</form>

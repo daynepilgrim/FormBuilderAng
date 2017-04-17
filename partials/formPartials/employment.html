@@ -1,0 +1,130 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">EMPLOYMENT HISTORY</h3>
+    </div>
+    <div class="panel-body">
+        <p class="help-block">Please start with your present or most recent position. You may include experience in the armed forces
+            of the U.S. that is relevant to the position for which you are applying. Please feel free to
+            attach any additional information where appropriate.</p>
+        <div class="panel panel-default" ng-repeat="em in employment">
+            <div class="panel-heading">{{em.title}}</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        Employer Name
+                        <input ng-model="formData.employment[em.index].name" placeholder="Name of Employer" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-6">
+                        Type of Business
+                        <input ng-model="formData.employment[em.index].typeOfBusiness" placeholder="Type of Business" class="form-control input-md" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        Current Address
+                        <input ng-model="formData.employment[em.index].street" placeholder="123 Main St" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-4">
+                        City
+                        <input ng-model="formData.employment[em.index].city" placeholder="City" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-2">
+                        State
+                        <input ng-model="formData.employment[em.index].state" placeholder="State" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-2">
+                        Zip
+                        <input ng-model="formData.employment[em.index].zip" placeholder="Zip" class="form-control input-md" type="number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        Start Position
+                        <input ng-model="formData.employment[em.index].startPosition" placeholder="Start Position" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-3">
+                        Start Date
+                        <input ng-model="formData.employment[em.index].startDate" placeholder="Start Date" class="form-control input-md" type="date">
+                    </div>
+                    <div class="col-md-2">
+                        Hourly / Salary
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="formData.employment[em.index].startHourlySalary" value="hourly"> Hourly
+                            </label>
+                            <label>
+                                <input type="radio" ng-model="formData.employment[em.index].startHourlySalary" value="salary"> Salary 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        Annual Income
+                        <input ng-model="formData.employment[em.index].startAnnualIncome" placeholder="Annual Income" class="form-control input-md" type="number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        End Position
+                        <input ng-model="formData.employment[em.index].endPosition" placeholder="End Position" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-3">
+                        End Date
+                        <input ng-model="formData.employment[em.index].endDate" placeholder="End Date" class="form-control input-md" type="date">
+                    </div>
+                    <div class="col-md-2">
+                        Hourly / Salary
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="formData.employment[em.index].endHourySalary" value="hourly"> Hourly
+                            </label>
+                            <label>
+                                <input type="radio" ng-model="formData.employment[em.index].endHourySalary" value="salary"> Salary 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        Annual Income
+                        <input ng-model="formData.employment[em.index].endAnnualIncome" placeholder="Annual Income" class="form-control input-md" type="number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        Reason For Separation
+                        <textarea ng-model="formData.employment[em.index].separation" placeholder="Reason for separation" class="form-control input-md"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        Last Immediate Supervisor
+                        <input ng-model="formData.employment[em.index].supervisor" placeholder="Last Immediate Supervisor" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-4">
+                        May We Contact This Employer?
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="formData.employment[em.index].contactEmployer" ng-value="true"> Yes
+                            </label>
+                            <label>
+                                <input type="radio" ng-model="formData.employment[em.index].contactEmployer" ng-value="false"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        Office Phone
+                        <input ng-model="formData.employment[em.index].officePhone" placeholder="(123)-456-7890" class="form-control input-md" type="tel">
+                    </div>
+                    <div class="col-md-4">
+                        Home/Cell Phone
+                        <input ng-model="formData.employment[em.index].homeCell" placeholder="(123)-456-7890" class="form-control input-md" type="tel">
+                    </div>
+                    <div class="col-md-4">
+                        Email
+                        <input ng-model="formData.employment[em.index].email" placeholder="hello@email.com" class="form-control input-md" type="email">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

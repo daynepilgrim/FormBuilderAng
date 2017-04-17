@@ -1,0 +1,131 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">EDUCATION INFORMATION</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-4">
+                High School
+                <input ng-model="formData.education.highSchool.name" placeholder="Name of High School" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-2">
+                Grade Completed
+                <select ng-model="formData.education.highSchool.grade" name="Grade" class="form-control">
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <option value="4">4 year</option>
+                    <option value="graduate">Graduate</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                Diploma/GED/Degree
+                <div class="radio">
+                    <label>
+                        <input type="radio" ng-model="formData.education.highSchool.diplomaReceived" ng-value="true"> YES
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.education.highSchool.diplomaReceived" ng-value="false"> NO 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Area of Study
+                <input ng-model="formData.education.highSchool.areaOfStudy" placeholder="Area of Study / Major" class="form-control input-md" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                College
+                <input ng-model="formData.education.college.name" placeholder="Name of College" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-2">
+                Grade Completed
+                <select ng-model="formData.education.college.grade" class="form-control">
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <option value="4">4 year</option>
+                    <option value="graduate">Graduate</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                Diploma/GED/Degree
+                <div class="radio">
+                    <label>
+                        <input type="radio" ng-model="formData.education.college.diplomaReceived" ng-value="true"> YES
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.education.college.diplomaReceived" ng-value="false"> NO 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Area of Study
+                <input ng-model="formData.education.college.areaOfStudy" placeholder="Area of Study / Major" class="form-control input-md" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                Graduate School
+                <input ng-model="formData.education.graduateSchool.name" placeholder="Name of Graduate School" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-2">
+                Grade Completed
+                <select ng-model="formData.education.graduateSchool.grade" class="form-control">
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <option value="4">4 year</option>
+                    <option value="5">Graduate</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                Diploma/GED/Degree
+                <div class="radio">
+                    <label>
+                        <input type="radio" ng-model="formData.education.graduateSchool.diplomaReceived" ng-value="true"> YES
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.education.graduateSchool.diplomaReceived" ng-value="false"> NO 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Area of Study
+                <input ng-model="formData.education.graduateSchool.areaOfStudy" placeholder="Area of Study / Major" class="form-control input-md" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                Technical School
+                <input ng-model="formData.education.technicalSchool.name" placeholder="Name of Technical School" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-2">
+                Grade Completed
+                <select ng-model="formData.education.technicalSchool.grade" class="form-control">
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <option value="4">4 year</option>
+                    <option value="5">Graduate</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                Diploma/GED/Degree
+                <div class="radio">
+                    <label>
+                        <input type="radio" ng-model="formData.education.technicalSchool.diplomaReceived" ng-value="true"> YES
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="formData.education.technicalSchool.diplomaReceived" ng-value="false"> NO 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Area of Study
+                <input ng-model="formData.education.technicalSchool.areaOfStudy" placeholder="Area of Study / Major" class="form-control input-md" type="text">
+            </div>
+        </div>
+    </div>
+</div>

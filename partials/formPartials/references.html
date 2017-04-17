@@ -1,0 +1,36 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">PROFESSIONAL REFERENCES</h3>
+    </div>
+    <div class="panel-body">
+                <div class="panel panel-default" ng-repeat="ref in references">
+            <div class="panel-heading">{{ref.title}}</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        Name
+                        <input ng-model="formData.references[ref.index].name" placeholder="Name of Reference" class="form-control input-md" type="text">
+                    </div>
+                    <div class="col-md-6">
+                        Association/Relationship
+                        <input ng-model="formData.references[ref.index].relationship" placeholder="Association/Relationship" class="form-control input-md" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        Office Phone
+                        <input ng-model="formData.references[ref.index].officePhone" placeholder="(123)-456-7890" class="form-control input-md" type="tel">
+                    </div>
+                    <div class="col-md-4">
+                        Home/Cell Phone
+                        <input ng-model="formData.references[ref.index].homeCell" placeholder="(123)-456-7890" class="form-control input-md" type="tel">
+                    </div>
+                    <div class="col-md-4">
+                        Email
+                        <input ng-model="formData.references[ref.index].email" placeholder="hello@email.com" class="form-control input-md" type="email">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

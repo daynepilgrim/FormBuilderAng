@@ -1,0 +1,27 @@
+{
+  "name": "lib",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.4",
+    "angular": "^1.6.4",
+    "moment": "^2.18.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "font-awesome": "^4.7.0",
+    "angular-messages": "^1.6.4",
+    "angular-schema-form": "^0.8.13",
+    "angular-schema-form-bootstrap": "^0.2.0",
+    "angular-schema-form-datepicker": "^1.4.1",
+    "pickadate": "^3.5.6"
+  }
+}

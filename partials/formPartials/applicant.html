@@ -1,0 +1,152 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">APPLICANT INFORMATION</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-4" ng-class="{'has-error' : appForm.firstName.$invalid && submitted}">
+                First Name*
+                <input ng-model="formData.applicant.firstName" name="firstName" placeholder="First Name" class="form-control input-md" type="text" required>
+                <div ng-messages="appForm.firstName.$error" ng-if="submitted">
+                    <p ng-message="required" class="help-block">Your first name is required.</p>
+                </div>
+            </div>
+            <div class="col-md-4" ng-class="{'has-error' : appForm.lastName.$invalid && submitted}">
+                Last Name*
+                <input ng-model="formData.applicant.lastName" name="lastName" placeholder="Last Name" class="form-control input-md" type="text" required>
+                <div ng-messages="appForm.lastName.$error" ng-if="submitted">
+                    <p ng-message="required" class="help-block">Your last name is required.</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                Initial
+                <input ng-model="formData.applicant.middleInitial" maxLength="1" placeholder="MI" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-3" ng-class="{'has-error' : appForm.appDate.$invalid && submitted}">
+                Application Date*
+                <input ng-model="formData.applicant.appDate" name="appDate" class="form-control input-md" type="date" required>
+                <div ng-messages="appForm.appDate.$error" ng-if="submitted">
+                    <p ng-message="required" class="help-block">The date is required.</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4" ng-class="{'has-error' : appForm.homePhone.$invalid && submitted}">
+                Home Phone
+                <input name="homePhone" ng-model="formData.applicant.homePhone" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" placeholder="(123)-456-7890" class="form-control input-md" type="tel">
+                <div ng-messages="appForm.homePhone.$error" ng-if="submitted">
+                    <p ng-message="pattern" class="help-block">Must be a valid 10 digit phone number.</p>
+                </div>
+            </div>
+            <div class="col-md-4" ng-class="{'has-error' : appForm.homePhone.$invalid && submitted}">
+                Cell Phone
+                <input name="cellPhone" ng-model="formData.applicant.cellPhone" placeholder="(123)-456-7890" class="form-control input-md" type="tel">
+                <div ng-messages="appForm.cellPhone.$error" ng-if="submitted">
+                    <p ng-message="pattern" class="help-block">Must be a valid 10 digit phone number.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Email
+                <input ng-model="formData.applicant.email" placeholder="hello@email.com" class="form-control input-md" type="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                Current Address
+                <input ng-model="formData.applicant.streetAddress" placeholder="123 Main St" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-4">
+                City
+                <input ng-model="formData.applicant.city" placeholder="City" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-2">
+                State
+                <input ng-model="formData.applicant.state" placeholder="State" class="form-control input-md" type="text">
+            </div>
+            <div class="col-md-2">
+                Zip
+                <input ng-model="formData.applicant.zip" name="" placeholder="Zip" class="form-control input-md" type="number">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                Are you legally authorized to work in the United States (If hired, verification will be required consistent with Federal
+                Law*):
+                <div class="radio">
+                    <label>
+                        <input ng-model="formData.applicant.above18" type="radio" value="true"> YES
+                    </label>
+                    <label>
+                        <input ng-model="formData.applicant.above18" type="radio" value="false"> NO 
+                    </label>
+                </div>
+                <p class="help-block">* Pursuant to the Immigration Reform and Control Act of 1986, all applicants who are offered
+                    employment must produce documents establishing their identity and authorization for employment
+                    in the United States. These documents must be produced no later than seventy-two (72)
+                    hours after employment commences. In addition, all new hires will be required to verify
+                    their employment authorization under oath by signing INS Form 1-9.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <div class="col-md-10">
+                    Position you are applying for (Employment applications are accepted only for posted open positions):
+                    <input ng-model="formData.applicant.position" class="form-control input-md" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <div class="col-md-6">
+                    Acceptable Salary Range
+                    <input ng-model="formData.applicant.salaryRange" placeholder="Desired Salary Range" class="form-control input-md" type="text">
+                </div>
+                <div class="col-md-6">
+                    Are you applying to work?
+                    <div class="radio">
+                        <label>
+                        <input type="radio" ng-model="formData.applicant.employmentType" value="fullTime"> Full-Time
+                    </label>
+                        <label>
+                        <input type="radio" ng-model="formData.applicant.employmentType" value="partTime"> Part-Time
+                    </label>
+                        <label> 
+                        <input type="radio" ng-model="formData.applicant.employmentType" value="temp"> Temporary 
+                    </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <div class="col-md-10">
+                    Check the shift(s) and overtime you can support:
+                    <div class="checkbox">
+                        <label><input type="checkbox" ng-model="formData.applicant.shift1st">1st</label>
+                        <label><input type="checkbox" ng-model="formData.applicant.shift2nd">2nd</label>
+                        <label><input type="checkbox" ng-model="formData.applicant.shift3rd">3rd</label>
+                        <label><input type="checkbox" ng-model="formData.applicant.extendWeekDayOT">Extended Week Day OT</label>
+                        <label><input type="checkbox" ng-model="formData.applicant.extendWeekEndOT">Extended Weekend OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                Are you under the age of 18?
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="formData.applicant.over18" ng-value="true"> YES
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="formData.applicant.over18" ng-value="false"> NO 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                If under the age of 18, please state your age:
+                <input ng-model="formData.applicant.under18Age" placeholder="Age" class="form-control input-md" type="number">
+            </div>
+        </div>
+    </div>
+</div>
